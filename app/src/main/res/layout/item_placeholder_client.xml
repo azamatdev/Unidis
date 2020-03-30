@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="8dp"
+        android:orientation="horizontal"
+        android:paddingStart="8dp"
+
+        >
+
+    <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            >
+
+        <ImageView
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:background="@drawable/circle_grey_placeholder"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                />
+
+    </RelativeLayout>
+
+    <android.support.constraint.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="56dp"
+            android:layout_marginStart="12dp"
+            android:paddingTop="4dp"
+            >
+
+
+        <View
+                android:id="@+id/name_placeholder"
+                android:layout_width="180dp"
+                android:background="@color/textLightDarker"
+                android:layout_height="18dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                />
+
+        <View
+                android:id="@+id/shop_placeholder"
+                android:layout_width="90dp"
+                android:background="@color/textLightDarker"
+                android:layout_height="16dp"
+                app:layout_constraintTop_toBottomOf="@id/name_placeholder"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                />
+
+
+
+        <View
+                android:id="@+id/line"
+                android:layout_width="wrap_content"
+                android:layout_height="0.08dp"
+                android:background="#969696"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/client_shop_number"
+                />
+
+
+    </android.support.constraint.ConstraintLayout>
+
+
+</LinearLayout>

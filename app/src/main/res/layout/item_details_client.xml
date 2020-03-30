@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/selectableItemBackground"
+        android:clickable="true"
+        android:focusable="true"
+        >
+    <LinearLayout
+                  android:orientation="horizontal"
+                  android:layout_width="match_parent"
+                  android:layout_height="match_parent"
+                  android:paddingTop="4dp"
+                  android:paddingBottom="4dp"
+            >
+
+
+        <TextView
+                android:id="@+id/details_date"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="12.02.2019"
+                android:gravity="center"
+                android:fontFamily="@font/roboto_medium"
+                android:textColor="@color/textColorGrey"
+                />
+
+        <TextView
+                android:id="@+id/details_given_money"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="56.2 $"
+                android:gravity="center"
+                android:fontFamily="@font/roboto_medium"
+                android:textColor="@color/textColorGrey"
+                />
+
+        <TextView
+                android:id="@+id/details_debt"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="6.2 $"
+                android:fontFamily="@font/roboto_medium"
+                android:gravity="center"
+                android:textColor="@color/textColorGrey"
+                />
+
+        <TextView
+                android:id="@+id/details_total_sales"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="6.2 $"
+                android:fontFamily="@font/roboto_medium"
+                android:gravity="center"
+                android:textColor="@color/black"
+                />
+    </LinearLayout>
+
+
+</android.support.constraint.ConstraintLayout>

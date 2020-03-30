@@ -1,0 +1,397 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.gw.swipeback.WxSwipeBackLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                    xmlns:app="http://schemas.android.com/apk/res-auto"
+                                    android:id="@+id/swipeBackLayout"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    app:directionMode="left"
+                                    app:isSwipeFromEdge="false"
+                                    app:maskAlpha="125"
+                                    app:swipeBackFactor="0.5">
+
+    <android.support.constraint.ConstraintLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:layout_width="match_parent"
+            android:background="@color/white"
+            android:layout_height="match_parent"
+            xmlns:ripple="http://schemas.android.com/apk/res-auto"
+            tools:context=".cart.CartActivity"
+            >
+
+        <android.support.v7.widget.Toolbar
+                android:id="@+id/cart_toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:contentInsetLeft="0dp"
+                app:contentInsetStart="0dp"
+                android:background="@color/colorPrimary"
+                >
+
+            <android.support.constraint.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    >
+
+                <ImageView
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        android:id="@+id/btn_back"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_arrow_white"
+                        android:padding="16dp"
+                        android:background="?attr/selectableItemBackgroundBorderless"
+                        />
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Savat"
+                        android:fontFamily="@font/roboto_bold"
+                        android:textColor="#fff"
+                        android:textSize="18sp"
+                        app:layout_constraintLeft_toRightOf="@id/btn_back"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        />
+            </android.support.constraint.ConstraintLayout>
+        </android.support.v7.widget.Toolbar>
+
+        <android.support.v7.widget.RecyclerView
+                android:id="@+id/cart_recycler"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                app:layout_constraintTop_toBottomOf="@id/cart_toolbar"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintBottom_toTopOf="@id/lnr"
+                android:overScrollMode="never"
+                tools:listitem="@layout/item_cart_item"
+                />
+
+        <View
+                android:layout_width="match_parent"
+                android:layout_height="4dp"
+                app:layout_constraintTop_toBottomOf="@id/cart_toolbar"
+                android:background="@drawable/bottom_shadow"
+                />
+
+        <LinearLayout
+                android:id="@+id/lnr"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:background="#fff"
+                >
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="12dp"
+                    android:paddingBottom="12dp"
+                    android:paddingStart="16dp"
+                    android:paddingEnd="16dp"
+                    android:orientation="vertical"
+
+                    >
+
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        >
+
+                    <ImageView
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ic_account"
+                            android:layout_gravity="center"
+                            android:alpha="0.7"
+                            />
+
+                    <android.support.design.widget.TextInputLayout
+                            android:id="@+id/input_layout_client"
+                            android:layout_width="0dp"
+                            android:layout_weight="7"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="8dp"
+                            >
+
+                        <EditText
+                                android:focusableInTouchMode="false"
+                                android:id="@+id/edtxt_client_search"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="Mijoz"
+
+                                />
+
+                    </android.support.design.widget.TextInputLayout>
+
+                    <com.nex3z.togglebuttongroup.MultiSelectToggleGroup
+                            android:id="@+id/hashtag_choice"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+
+                            >
+
+                        <com.nex3z.togglebuttongroup.button.CircularToggle
+                                android:id="@+id/hashtag"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="#"
+                                android:textSize="16sp"/>
+
+                    </com.nex3z.togglebuttongroup.MultiSelectToggleGroup>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        >
+
+                    <ImageView
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ic_cash"
+                            android:layout_gravity="center"
+                            android:alpha="0.7"
+                            />
+
+                    <android.support.design.widget.TextInputLayout
+                            android:id="@+id/input_layout_client_money"
+                            android:layout_width="0dp"
+                            android:layout_weight="5.3"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="8dp"
+                            >
+
+                        <EditText
+                                android:id="@+id/edtxt_client_money"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="Berilgan so'mmasi"
+                                android:inputType="numberDecimal"
+                                />
+
+                    </android.support.design.widget.TextInputLayout>
+
+                    <com.kyleduo.switchbutton.SwitchButton
+                            android:textColor="@android:color/white"
+                            android:id="@+id/switch_rate"
+                            android:visibility="visible"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:checked="false"
+                            app:kswBackDrawable="@drawable/switch_color"
+                            app:kswTextAdjust="-6dp"
+                            app:kswTextThumbInset="-8dp"
+                            app:kswThumbColor="#ffffffff"
+                            app:kswFadeBack="false"
+                            android:paddingStart="8dp"
+                            android:paddingEnd="8dp"
+                            app:kswTextOn="UZS"
+                            app:kswTextOff="USD"
+                            />
+                </LinearLayout>
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        >
+
+                    <ImageView
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            />
+                    <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_weight="6"
+                            android:layout_marginStart="4dp"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            >
+                        <TextView
+                                android:layout_width="wrap_content"
+                                android:textSize="12sp"
+                                android:layout_height="wrap_content"
+                                android:text="To'lov summasi:  "
+                                />
+                        <TextView
+                                android:id="@+id/currency_amount"
+                                android:layout_width="wrap_content"
+                                android:textSize="12sp"
+                                android:layout_height="wrap_content"
+                                android:text="0.0"
+                                />
+                        <TextView
+                                android:id="@+id/currency_label"
+                                android:layout_width="wrap_content"
+                                android:textSize="12sp"
+                                android:layout_height="wrap_content"
+                                android:text="   so'm"
+                                />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+            <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/colorPrimary"
+                    />
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    >
+                <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="8dp"
+                        >
+                    <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Umumiy"
+                            android:gravity="center"
+                            android:textSize="12sp"
+                            android:textColor="@color/colorPrimary"
+                            android:fontFamily="@font/roboto_regular"
+                            />
+                    <TextView
+                            android:id="@+id/cart_total_price"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="630.0 $"
+                            android:textSize="18sp"
+                            android:gravity="center"
+                            android:layout_marginTop="4dp"
+                            android:textColor="@color/colorPrimary"
+                            android:fontFamily="@font/roboto_bold"
+                            />
+
+                </LinearLayout>
+
+                <!--<View-->
+                <!--android:layout_width="0.5dp"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:background="@color/colorPrimary"-->
+                <!--android:layout_marginTop="4dp"-->
+                <!--android:layout_marginBottom="4dp"-->
+                <!--/>-->
+                <!---->
+                <!--<TextView-->
+                <!--android:id="@+id/cart_total_price"-->
+                <!--android:layout_width="0dp"-->
+                <!--android:layout_weight="1"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:text="630.0 $"-->
+                <!--android:textColor="@color/colorPrimary"-->
+                <!--android:gravity="center"-->
+                <!--android:padding="8dp"-->
+                <!--android:textSize="20sp"-->
+                <!--android:fontFamily="@font/roboto_bold"-->
+                <!--/>-->
+
+                <com.andexert.library.RippleView
+                        android:id="@+id/ripple_send"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1.2"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        ripple:rv_type="rectangle"
+                        ripple:rv_zoom="true"
+                        app:rv_zoomDuration="100"
+                        app:rv_zoomScale="1.03"
+                        app:rv_rippleDuration="200"
+                        app:rv_color="@color/rippelColor"
+                        >
+
+                    <RelativeLayout
+                            android:id="@+id/cart_send"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@color/colorPrimary"
+                            android:gravity="center"
+                            android:padding="8dp"
+                            >
+                        <LinearLayout
+                                android:id="@+id/lnr_send"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:layout_centerInParent="true"
+                                >
+
+                            <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="JO'NATISH"
+                                    android:gravity="center"
+                                    android:textSize="18sp"
+                                    android:textColor="@color/white"
+                                    android:fontFamily="@font/roboto_bold"
+                                    />
+                            <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:src="@drawable/ic_send_white"
+                                    android:layout_marginStart="4dp"
+                                    />
+                        </LinearLayout>
+
+                        <com.airbnb.lottie.LottieAnimationView
+                                android:id="@+id/anim_loading"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                app:lottie_rawRes="@raw/loading"
+                                android:layout_gravity="center"
+                                app:lottie_autoPlay="true"
+                                android:visibility="gone"
+                                android:layout_centerInParent="true"
+                                app:lottie_loop="true"
+                                />
+                        <com.airbnb.lottie.LottieAnimationView
+                                android:id="@+id/anim_success"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                app:lottie_rawRes="@raw/tick"
+                                android:visibility="gone"
+                                android:layout_gravity="center"
+                                android:layout_centerInParent="true"
+                                app:lottie_autoPlay="false"
+                                app:lottie_loop="false"
+                                />
+                    </RelativeLayout>
+                </com.andexert.library.RippleView>
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+    </android.support.constraint.ConstraintLayout>
+</com.gw.swipeback.WxSwipeBackLayout>

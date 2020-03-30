@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+
+    <TextView
+            android:id="@+id/dialog_model_id"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="SDCZ60-064G-B35"
+            android:fontFamily="@font/roboto_medium"
+            android:textColor="@color/textMainColor"
+            android:textSize="16sp"
+            android:layout_margin="8dp"
+            />
+
+    <View
+            android:id="@+id/line"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/colorPrimary"
+            app:layout_constraintTop_toBottomOf="@id/dialog_model_id"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_marginTop="4dp"
+            app:layout_constraintRight_toRightOf="parent"
+            />
+
+    <LinearLayout
+            android:id="@+id/lnr_model"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginStart="16dp"
+            android:orientation="vertical"
+            >
+
+        <LinearLayout
+                android:id="@+id/model_input"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                >
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="4dp"
+                    android:text="Soni"
+                    android:fontFamily="@font/roboto_medium"
+                    android:textColor="@color/textMainColor"
+                    android:textSize="12sp"
+                    />
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" * "
+                    android:textColor="@color/red"
+                    />
+
+        </LinearLayout>
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:paddingEnd="8dp"
+                android:paddingStart="12dp"
+                android:background="@drawable/bc_edtxt"
+                >
+
+            <EditText
+                    android:id="@+id/edtxt_quantity"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:paddingTop="12dp"
+                    android:paddingBottom="12dp"
+                    android:inputType="number"
+                    android:textSize="14sp"
+                    android:background="@android:color/transparent"
+                    />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+            android:id="@+id/lnr_price"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginStart="16dp"
+            android:orientation="vertical"
+            >
+
+        <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                >
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="4dp"
+                    android:text="Narx $"
+                    android:fontFamily="@font/roboto_medium"
+                    android:textColor="@color/textMainColor"
+                    android:textSize="12sp"
+                    />
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" * "
+                    android:layout_marginStart="2dp"
+                    android:textColor="@color/red"
+                    />
+
+        </LinearLayout>
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:paddingEnd="8dp"
+                android:paddingStart="12dp"
+                android:background="@drawable/bc_edtxt"
+                >
+
+            <EditText
+                    android:id="@+id/edtxt_price"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:paddingTop="12dp"
+                    android:paddingBottom="12dp"
+                    android:textSize="14sp"
+                    android:inputType="numberDecimal"
+                    android:background="@android:color/transparent"
+                    />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <View
+            android:id="@+id/line2"
+            android:layout_marginTop="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/colorPrimary"
+            app:layout_constraintBottom_toTopOf="@id/lnr_buttons"
+            />
+
+    <LinearLayout
+            android:id="@+id/lnr_buttons"
+            app:layout_constraintTop_toBottomOf="@id/lnr_price"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+
+        <RelativeLayout
+                android:id="@+id/btn_cancel"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:padding="12dp"
+                android:layout_height="wrap_content"
+                >
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="BEKOR QILISH"
+                    android:textSize="18sp"
+                    android:layout_centerInParent="true"
+                    android:fontFamily="@font/roboto_medium"
+                    android:textColor="@color/colorPrimary"
+                    />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+                android:clickable="true"
+                android:focusable="true"
+                android:id="@+id/btn_add"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:padding="12dp"
+                android:layout_height="wrap_content"
+                android:background="@color/colorPrimary"
+                >
+
+            <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    >
+
+                <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_cart_arrow_down"
+                        />
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="QO'SHISH"
+                        android:textSize="18sp"
+                        android:layout_marginStart="4dp"
+                        android:fontFamily="@font/roboto_medium"
+                        android:textColor="#fff"
+                        />
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+</LinearLayout>

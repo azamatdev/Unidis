@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:overScrollMode="never"
+        >
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:orientation="vertical"
+            tools:context=".manager.GeneralFragment"
+            android:paddingBottom="16dp"
+            >
+        <LinearLayout
+                android:layout_marginTop="8dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:focusableInTouchMode="true"
+                >
+
+            <android.support.design.card.MaterialCardView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    app:cardCornerRadius="8dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="8dp"
+                    app:cardBackgroundColor="#F3F8FF"
+                    >
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:paddingBottom="16dp"
+                        >
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="UMUMIY SAVDO"
+                            android:textSize="12sp"
+                            android:layout_margin="4dp"
+                            android:textColor="@color/menuIconColor"
+                            android:fontFamily="@font/sans_regular"
+                            />
+
+                    <TextView
+                            android:id="@+id/total_amount_sale"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="0.0 $"
+                            android:gravity="center"
+                            android:textSize="18sp"
+                            android:textColor="@color/menuIconColor"
+                            android:fontFamily="@font/sans_bold"
+                            />
+                </LinearLayout>
+
+            </android.support.design.card.MaterialCardView>
+
+            <android.support.design.card.MaterialCardView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_height="wrap_content"
+                    app:cardCornerRadius="8dp"
+                    app:cardBackgroundColor="#F3F8FF"
+                    >
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:paddingBottom="16dp"
+                        >
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="UMUMIY FOYDA"
+                            android:textSize="12sp"
+                            android:layout_margin="4dp"
+                            android:textColor="@color/menuIconColor"
+                            android:fontFamily="@font/sans_regular"
+                            />
+
+                    <TextView
+                            android:id="@+id/total_amount_profit"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="0.0 $"
+                            android:gravity="center"
+                            android:textSize="18sp"
+                            android:textColor="@color/menuIconColor"
+                            android:fontFamily="@font/sans_bold"
+                            />
+                </LinearLayout>
+
+            </android.support.design.card.MaterialCardView>
+
+        </LinearLayout>
+
+        <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/loading"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:lottie_rawRes="@raw/material_loading"
+                app:lottie_autoPlay="true"
+                app:lottie_loop="true"
+                />
+
+        <android.support.v7.widget.RecyclerView
+                android:id="@+id/general_info_recyler"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                />
+
+    </LinearLayout>
+</ScrollView>

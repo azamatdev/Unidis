@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="brand_name">
+        <item></item>
+    </string-array>
+
+    <string-array name="date">
+        <item>Oxirgi 7 kun</item>
+        <item>Oxirgi 30 kun</item>
+        <item>Umumiy</item>
+        <item>Boshqa muddat</item>
+    </string-array>
+</resources>

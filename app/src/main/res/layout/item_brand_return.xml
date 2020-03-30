@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.andexert.library.RippleView
+        xmlns:ripple="http://schemas.android.com/apk/res-auto"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        ripple:rv_type="rectangle"
+        ripple:rv_zoom="true"
+        app:rv_zoomDuration="70"
+        app:rv_zoomScale="1.03"
+        app:rv_rippleDuration="200"
+        app:rv_color="@color/rippelColor"
+        >
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:layout_width="wrap_content"
+                    android:id="@+id/brand_relative"
+                    android:paddingStart="12dp"
+                    android:paddingEnd="12dp"
+                    android:paddingTop="4dp"
+                    android:paddingBottom="4dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginBottom="4dp"
+                    android:background="@drawable/bc_brand_unselected"
+                    android:layout_height="wrap_content"
+            >
+
+        <TextView
+                android:id="@+id/brandName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="PNY"
+                android:layout_centerInParent="true"
+                android:fontFamily="@font/sans_semibold"
+                android:textColor="@color/textMainColor"
+                android:textSize="16sp"
+                />
+    </RelativeLayout>
+</com.andexert.library.RippleView>

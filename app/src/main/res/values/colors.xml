@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#4285F4</color>
+    <color name="colorPrimaryDark">#4285F4</color>
+    <color name="colorAccent">#FFC107</color>
+
+    <color name="red">#FF0000</color>
+    <color name="redLight">#F85959</color>
+    <color name="indigo">#9E59F8</color>
+    <color name="blue">#59AEF8</color>
+    <color name="green">#59F88E</color>
+    <color name="orange">#F8BD59</color>
+
+    <color name="textMainColor">#3F4457</color>
+    <color name="textLightColor">#979ebc</color>
+    <color name="white">#fff</color>
+    <color name="rippleEffectColor">#c4c4c4</color>
+
+    <color name="menuIconColor">#092757</color>
+
+    <color name="textColorGrey">#5C5C5C</color>
+    <color name="lightGrey">#E3E7EA</color>
+    <color name="indigoDark">#4C47DD</color>
+    <color name="textLightDarker">#e7edec</color>
+
+
+    <color name="switchGreen">#94D137</color>
+    <color name="switchBlue">#0495F9</color>
+
+    <color name="firebaseLight">#262F3D</color>
+    <color name="firebaseDark">#19212B</color>
+    <color name="firebaseIndigo">#673AB7</color>
+    <color name="brandSelectedColor">#5C57E6</color>
+
+
+</resources>

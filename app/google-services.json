@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "684769401060",
+    "firebase_url": "https://unidis-88b5a.firebaseio.com",
+    "project_id": "unidis-88b5a",
+    "storage_bucket": "unidis-88b5a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:684769401060:android:5a5ecc421a8ca5a0",
+        "android_client_info": {
+          "package_name": "uz.codic.unidis"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "684769401060-0kgfr7t4hnojbp682huo4uln7pnpdtuq.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "uz.codic.unidis",
+            "certificate_hash": "3bb7195193a49e44ddcc330f159b4e7efa6b56c6"
+          }
+        },
+        {
+          "client_id": "684769401060-kh0nhpd5b2pvnr1pndt20bmeh4apkjf3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDTGEDYLLCwdGl8HMH7kS-nYY9HWVxTgwk"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "684769401060-kh0nhpd5b2pvnr1pndt20bmeh4apkjf3.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

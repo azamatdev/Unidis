@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          xmlns:tools="http://schemas.android.com/tools"
+          package="uz.codic.unidis"
+        >
+
+    <application
+            android:name=".MvpApplication"
+            android:allowBackup="true"
+            android:icon="@mipmap/ic_launcher"
+            android:label="@string/app_name"
+            android:roundIcon="@mipmap/ic_launcher_round"
+            android:supportsRtl="true"
+            android:theme="@style/AppTheme"
+            tools:ignore="GoogleAppIndexingWarning"
+            >
+        <activity android:name=".expenses.ExpensesActivity"
+                  android:theme="@style/Theme.Swipe.Back.NoActionBar">
+        </activity>
+        <activity
+                android:name=".MainActivity2"
+                android:theme="@style/AppTheme.NoActionBar"
+                android:windowSoftInputMode="adjustResize"
+                >
+        </activity>
+        <activity
+                android:name=".sales.order.OrderActivity"
+                android:theme="@style/Theme.Swipe.Back.NoActionBar"
+                >
+        </activity>
+        <activity
+                android:name=".cart.CartActivity"
+                android:theme="@style/Theme.Swipe.Back.NoActionBar"
+                android:windowSoftInputMode="adjustResize|adjustPan"
+                >
+
+            <!-- <intent-filter> -->
+            <!-- <action android:name="android.intent.action.MAIN"/> -->
+
+
+            <!-- <category android:name="android.intent.category.LAUNCHER"/> -->
+            <!-- </intent-filter> -->
+        </activity>
+        <activity
+                android:name=".clients.AddClientActivity"
+                android:theme="@style/Theme.Swipe.Back.NoActionBar"
+                >
+        </activity>
+        <activity
+                android:name=".clients.details.ClientDetailsActivity"
+                android:theme="@style/Theme.Swipe.Back.NoActionBar"
+                />
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity
+                android:name=".input.AddProductActivity"
+                android:theme="@style/Theme.Swipe.Back.NoActionBar"
+                >
+        </activity>
+        <activity
+                android:name=".fixedPrice.FixedPriceActivity"
+                android:theme="@style/Theme.Swipe.Back.NoActionBar"
+                >
+        </activity>
+        <activity
+                android:name=".input.InputActivity"
+                android:theme="@style/Theme.Swipe.Back.NoActionBar"
+                >
+        </activity>
+        <activity android:name=".sales.SalesActivity">
+        </activity>
+        <activity
+                android:name=".clients.ClientActivity"
+                android:theme="@style/Theme.Swipe.Back.NoActionBar"
+                >
+
+            <!-- <intent-filter> -->
+            <!-- <action android:name="android.intent.action.MAIN"/> -->
+
+
+            <!-- <category android:name="android.intent.category.LAUNCHER"/> -->
+            <!-- </intent-filter> -->
+        </activity>
+        <activity
+                android:name=".clients.returnProduct.ReturnActivity"
+                android:theme="@style/Theme.Swipe.Back.NoActionBar"
+                >
+        </activity>
+        <activity
+                android:name=".manager.ManagerActivity"
+                android:theme="@style/Theme.Swipe.Back.NoActionBar"
+                >
+
+            <!-- <intent-filter> -->
+            <!-- <action android:name="android.intent.action.MAIN"/> -->
+
+
+            <!-- <category android:name="android.intent.category.LAUNCHER"/> -->
+            <!-- </intent-filter> -->
+        </activity>
+    </application>
+
+</manifest>

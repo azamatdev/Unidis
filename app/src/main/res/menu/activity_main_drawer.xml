@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:tools="http://schemas.android.com/tools"
+      tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+                android:id="@+id/nav_input"
+                android:icon="@drawable/ic_database_plus"
+                android:title="Kirim"/>
+        <item
+                android:id="@+id/nav_sales"
+                android:icon="@drawable/ic_send_black_24dp"
+                android:title="Savdo"/>
+        <item
+                android:id="@+id/nav_expenses"
+                android:icon="@drawable/ic_cash_multiple"
+                android:title="Xarajat"/>
+        <item
+                android:id="@+id/nav_clients"
+                android:icon="@drawable/ic_account_multiple"
+                android:title="Mijozlar"/>
+    </group>
+
+    <!--<item android:title="Communicate">-->
+        <!--<menu>-->
+            <!--<item-->
+                    <!--android:id="@+id/nav_share"-->
+                    <!--android:icon="@drawable/ic_menu_share"-->
+                    <!--android:title="Share"/>-->
+            <!--<item-->
+                    <!--android:id="@+id/nav_send"-->
+                    <!--android:icon="@drawable/ic_menu_send"-->
+                    <!--android:title="Send"/>-->
+        <!--</menu>-->
+    <!--</item>-->
+
+</menu>

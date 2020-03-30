@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.andexert.library.RippleView
+        android:id="@+id/brands_ripple_effect"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:ripple="http://schemas.android.com/tools"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        ripple:rv_type="rectangle"
+        ripple:rv_zoom="true"
+        app:rv_zoomDuration="70"
+        app:rv_zoomScale="1.03"
+        app:rv_rippleDuration="100"
+        app:rv_color="@color/rippleEffectColor"
+        >
+
+    <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            >
+
+        <View
+                android:id="@+id/sales_color"
+                android:layout_width="6dp"
+                android:layout_height="match_parent"
+                android:background="@color/green"
+                />
+
+        <TextView
+                android:id="@+id/sales_brand_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="SanDisk"
+                android:fontFamily="@font/roboto_medium"
+                android:textColor="#000"
+                android:textSize="16sp"
+                android:layout_marginStart="12dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintLeft_toRightOf="@id/sales_color"
+                app:layout_constraintBottom_toBottomOf="parent"
+                />
+
+        <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:src="@drawable/ic_navigate_next_black_24dp"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                />
+
+        <View
+                android:layout_width="match_parent"
+                android:layout_height="0.4dp"
+                android:background="@color/textLightColor"
+                app:layout_constraintBottom_toBottomOf="parent"
+                />
+
+    </android.support.constraint.ConstraintLayout>
+</com.andexert.library.RippleView>
